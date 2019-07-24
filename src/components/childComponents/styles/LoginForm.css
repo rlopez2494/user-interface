@@ -1,0 +1,100 @@
+/************************LOGIN FORM*****************************/
+#login-form {
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255, 0.3);
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#login-form button {
+    width: 120px;
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 10px;
+    background: rgb(7, 116, 150);
+    color: #eee;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#login-form select, #login-form input[type="text"] {
+    box-sizing: border-box;
+    height: 50px;
+}
+
+#login-form form {
+    width: 75%;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+#login-form form::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/***********************LOGIN FIELDS***************************/
+#login-fields {
+    width: 80%;
+    background-color: #eee;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 18px 10px;
+}
+
+#login-fields a {
+    font-size: 13px;
+    color: rgb(51, 51, 51);
+    font-weight: 500;
+    position: relative;
+    left: 80px;
+}
+#login-fields a::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#login-fields input {
+    padding: 0;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+/*************************** MISCUE ******************************/
+#bienvenido {
+    width: 200px;
+    border-radius: 10px;
+    color: rgb(56, 133, 163);
+    background-color: #eee;  
+    margin: 0 auto;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px 10px;
+    position: relative;
+    bottom: 18px;
+}
+
+#login-error {
+    margin: 12px 0;
+}
+
+#login-error p {
+    color: rgb(221, 16, 16);
+    padding: 0;
+    display: inline;
+}
+
+#registrarse {
+    float: left;
+}
+
+#ingresar {
+    float: right;
+}
+
