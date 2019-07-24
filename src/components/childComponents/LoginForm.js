@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import './styles/LoginForm.css'
-import Advertencia from '../../img/advertencia.jpg'
+import './styles/LoginForm.css';
+import Advertencia from '../../img/advertencia.jpg';
+import axios from 'axios';
 
 class LoginForm extends Component{
     state = {
@@ -11,7 +12,42 @@ class LoginForm extends Component{
     password: ""
     }
 
-    renderSwitch (param) {
+    apiCall = () => {
+
+        const { cedula, password } = this.state;
+        console.log(cedula, password);
+
+        axios.post('http://localhost:9000/login', {
+            cedula,
+            password
+        })
+        .then(function(response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
+    }
+ 
+    handleChange = (e) => {
+        const { name, value } = e.target;
+
+        this.setState({
+            [name]: value
+        });
+    }
+
+    handleSubmit = (e) => {
+
+        const { cedula, password } = this.state;
+        console.log(cedula, password)
+
+        e.preventDefault();
+        this.apiCall();
+
+    }
+  
+    renderSwitch =  (param) => {
         switch (param) {
             case 1: 
             return(<p>Contraseña incorrecta</p>);
@@ -36,14 +72,31 @@ class LoginForm extends Component{
                 <div id="login-fields">
     
                     <div>
-                        <select name="nacionalidad">
+                        <select 
+                        name="nacionalidad" 
+                        value={this.state.nacionalidad} 
+                        onChange={this.handleChange}
+                        >
                             <option value="v">V-</option>
-                            <option value="v">E-</option>
+                            <option value="e">E-</option>
                         </select>
     
-                        <input type="text" name="cedula" placeholder="12345678" />
+                        <input 
+                        type="text" 
+                        name="cedula" 
+                        placeholder="12345678" 
+                        value={this.state.cedula}
+                        onChange={this.handleChange}
+                        />
     
-                        <input type="text" name="password" placeholder="CONTRASE;A"/>
+                        <input 
+                        type="password" 
+                        name="password" 
+                        placeholder="CONTRASE;A"
+                        value={this.state.password}
+                        onChange={this.handleChange}
+                        />
+
                     </div>
     
                     {/*Conditional Rendering for errors*/}
@@ -67,7 +120,7 @@ class LoginForm extends Component{
             
                 </div>
     
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <button type="submit" id="registrarse">REGISTRARSE</button>
                     <button type="submit" id="ingresar">INGRESAR</button>
                 </form>

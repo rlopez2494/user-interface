@@ -22,9 +22,29 @@
     padding: 10px;
 }
 
-#login-form select, #login-form input[type="text"] {
+#login-form select {
+    border: 1px solid rgb(7, 116, 150);
+}
+
+#login-form input[type="text"], 
+#login-form input[type="password"] {
+    border: none;
+    border-bottom: 1px solid rgb(7, 116, 150);
+}
+
+#login-form input[type="text"]::placeholder, 
+#login-form input[type="password"]::placeholder {
+    color: rgb(7, 116, 150);
+}
+
+#login-form select, 
+#login-form input[type="text"], 
+#login-form input[type="password"] {
     box-sizing: border-box;
     height: 50px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color:  rgb(7, 116, 150);
 }
 
 #login-form form {
