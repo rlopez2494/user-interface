@@ -118,3 +118,46 @@
     float: right;
 }
 
+#udo-nombre {
+    float: left;
+}
+
+/***************************** MEDIA QUERIES ****************************/
+@media screen and (max-width: 790px) {
+    #realizado-por {
+        display: none;
+    }
+
+    #login-footer {
+        text-align: center;
+    }
+    #udo-nombre {
+        float: none;
+    }
+}
+
+@media screen and (max-width: 430px) {
+
+    #login-form {
+        width: 92%;
+    }
+
+    #login-fields input[type="text"],
+    #login-fields input[type="password"], 
+    #login-fields select {
+        font-size: 80%;
+        font-weight: bold;
+    }
+
+    #login-fields a {
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #ingresar, #registrarse {
+        float: none;
+        display: block;
+        margin: 0 auto 10px auto;
+    }
+}

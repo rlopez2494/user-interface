@@ -3,6 +3,7 @@
     bottom: 0;
     width: 100%;
     text-align: center;
+    background: rgba(000, 000, 000, 0.2)
 }
 
 #login-footer {

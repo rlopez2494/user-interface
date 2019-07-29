@@ -5,11 +5,11 @@ import axios from 'axios';
 
 class LoginForm extends Component{
     state = {
-    error : false,
-    errorType : 3,
-    nacionalidad: "v",
-    cedula: "",
-    password: ""
+        error : false,
+        errorType : "",
+        nacionalidad: "v",
+        cedula: "",
+        password: ""
     }
 
     apiCall = () => {
@@ -21,11 +21,19 @@ class LoginForm extends Component{
             cedula,
             password
         })
-        .then(function(response) {
-            console.log(response);
-        })
-        .catch(function (error) {
-            console.log(error);
+        .then((response) => {
+            console.log(response.data);
+            // const error = response.data;
+            
+
+            //     this.setState({
+            //         error: true,
+            //         errorType: error
+            //     });
+
+            })
+        .catch(function (err) {
+            console.log(err);
         })
     }
  
@@ -47,21 +55,6 @@ class LoginForm extends Component{
 
     }
   
-    renderSwitch =  (param) => {
-        switch (param) {
-            case 1: 
-            return(<p>Contraseña incorrecta</p>);
-
-            case 2:
-            return(<p>El usuario no esta registrado</p>);
-
-            case 3:
-            return(<p>Error de servidor, vuelva a intentarlo</p>);
-
-            default:
-            return null;
-        }
-    }
 
     render() {
         return(
@@ -105,11 +98,16 @@ class LoginForm extends Component{
                         (this.state.error) ?
     
                             <div id="login-error">
-                                <img src={Advertencia} alt="warning" width="20" height="20"/>
+                                <img 
+                                    src={Advertencia} 
+                                    alt="warning" 
+                                    width="20" 
+                                    height="20"
+                                />
     
                                 {/*Conditional Rendering for errorType*/}
                                 
-                                {this.renderSwitch(this.state.errorType)}                            
+                                <p>{this.state.errorType}</p>                            
                                 
                             </div>
                         
@@ -121,8 +119,19 @@ class LoginForm extends Component{
                 </div>
     
                 <form onSubmit={this.handleSubmit}>
-                    <button type="submit" id="registrarse">REGISTRARSE</button>
-                    <button type="submit" id="ingresar">INGRESAR</button>
+
+                    <button 
+                        type="submit" 
+                        id="ingresar"
+                        >INGRESAR
+                    </button>
+
+                    <button 
+                        type="submit" 
+                        id="registrarse"
+                        >REGISTRARSE
+                    </button>
+
                 </form>
                 
             </div>
