@@ -1,0 +1,20 @@
+#usuario {
+    display: flex;
+    min-height: 100vh;
+}
+
+#usuario #header {
+    background-color: #0C2130;
+}
+
+.column {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#right {
+    width: 100%;
+}
+
+

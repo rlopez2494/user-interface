@@ -1,0 +1,27 @@
+#header {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 10px;
+}
+
+#header #logo {
+    display: flex;
+}
+
+#header img {
+    margin: auto 12px; 
+}
+
+#header a {
+    margin: auto 0;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#header h1{
+    width: 200px;
+}

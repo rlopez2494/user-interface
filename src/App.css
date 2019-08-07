@@ -3,3 +3,11 @@ body {
   background-size: cover;
   /* background-color: #282c34; */
 }
+
+.container {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+
+

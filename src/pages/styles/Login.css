@@ -1,0 +1,17 @@
+#login {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+}
+
+#login #header {
+    background-color: rgba( 000, 000, 000, 0.1);
+}
+
+#login #footer {
+    color: #ffffff;
+    display: flex;
+    background-color: rgba( 000, 000, 000, 0.1);
+    justify-content: space-around;
+}

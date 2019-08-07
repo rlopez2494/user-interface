@@ -1,22 +1,22 @@
 import React from 'react';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import MainSection from './components/MainSection'
+import {BrowserRouter as Router, Route } from 'react-router-dom' 
 import './App.css';
+import Login from './pages/Login';
+import Usuario from "./pages/Usuario";
 
 function App() {
+
+  console.log(window.location)
+
   return (
     <div className="App">
+      <Router>
 
-      {/*Header Container */}
-      <Header />
+        <Route path="/" exact component={Login} />
 
-      {/*MainSection Container*/}
-      <MainSection />
+        <Route path="/usuario" component={Usuario} />
 
-      {/*Footer Container*/ }
-      <Footer />
-
+      </Router>
     </div>
   );
 }

@@ -1,29 +1,29 @@
 /************************LOGIN FORM*****************************/
 #login-form {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
     width: 400px;
-    text-align: center;
-    margin: 0 auto;
-    background-color: rgb(255, 255, 255, 0.3);
+    height: 317;
+    background-color: rgba(99, 175, 204, 0.55);
+    border: 1px solid #63AFCC;
     border-radius: 5px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
-#login-form button {
-    width: 120px;
-    border: 1px solid rgb(80, 80, 80);
-    border-radius: 10px;
-    background: rgb(7, 116, 150);
-    color: #eee;
-    font-size: 13px;
-    font-weight: bold;
-    padding: 10px;
-}
-
-#login-form select {
+#login-form select{
     border: 1px solid rgb(7, 116, 150);
+    color:  rgb(7, 116, 150);
+}
+
+#login-form select, 
+#login-form input[type="text"], 
+#login-form input[type="password"] {
+    box-sizing: border-box;
+    height: 50px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: center;
 }
 
 #login-form input[type="text"], 
@@ -37,34 +37,39 @@
     color: rgb(7, 116, 150);
 }
 
-#login-form select, 
-#login-form input[type="text"], 
 #login-form input[type="password"] {
-    box-sizing: border-box;
-    height: 50px;
-    margin-bottom: 10px;
-    font-size: 18px;
-    color:  rgb(7, 116, 150);
+    width: 100%;
 }
 
-#login-form form {
+#login-form button {
+    width: 120px;
+    border: 1px solid #00B9FF;
+    border-radius: 10px;
+    background: #00B9FF;
+    color: #eee;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#login-form form{
+    display: flex;
+    justify-content: space-around; 
     width: 75%;
-    margin: 0 auto;
-    padding: 30px 0;
+    margin: 15px 0;
 }
-#login-form form::after {
-    content: "";
-    clear: both;
-    display: block;
-}
+
 
 /***********************LOGIN FIELDS***************************/
 #login-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 80%;
-    background-color: #eee;
-    margin: 0 auto;
+    background-color: #ffffff;
     border-radius: 5px;
     padding: 18px 10px;
+    margin: 8px 0;
 }
 
 #login-fields a {
@@ -74,52 +79,20 @@
     position: relative;
     left: 80px;
 }
-#login-fields a::after {
-    content: "";
-    clear: both;
-    display: block;
-}
-
-#login-fields input {
-    padding: 0;
-    margin-bottom: 2px;
-    text-align: center;
-}
 
 /*************************** MISCUE ******************************/
 #bienvenido {
     width: 200px;
     border-radius: 10px;
     color: rgb(56, 133, 163);
-    background-color: #eee;  
+    background-color: #ffffff;  
     margin: 0 auto;
     font-size: 25px;
     font-weight: bold;
     padding: 5px 10px;
     position: relative;
     bottom: 18px;
-}
-
-#login-error {
-    margin: 12px 0;
-}
-
-#login-error p {
-    color: rgb(221, 16, 16);
-    padding: 0;
-    display: inline;
-}
-
-#registrarse {
-    float: left;
-}
-
-#ingresar {
-    float: right;
-}
-
-#udo-nombre {
-    float: left;
+    text-align: center;
 }
 
 /***************************** MEDIA QUERIES ****************************/
@@ -161,3 +134,4 @@
         margin: 0 auto 10px auto;
     }
 }
+

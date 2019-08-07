@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './styles/LoginForm.css';
 import Advertencia from '../../img/advertencia.jpg';
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 class LoginForm extends Component{
     state = {
@@ -64,23 +65,30 @@ class LoginForm extends Component{
     
                 <div id="login-fields">
     
-                    <div>
-                        <select 
-                        name="nacionalidad" 
-                        value={this.state.nacionalidad} 
-                        onChange={this.handleChange}
-                        >
-                            <option value="v">V-</option>
-                            <option value="e">E-</option>
-                        </select>
-    
-                        <input 
-                        type="text" 
-                        name="cedula" 
-                        placeholder="12345678" 
-                        value={this.state.cedula}
-                        onChange={this.handleChange}
-                        />
+                    
+                    <div id="fields-container">
+
+                        <div id="cedula-select">
+
+                            <select 
+                            name="nacionalidad" 
+                            value={this.state.nacionalidad} 
+                            onChange={this.handleChange}
+                            >
+                                <option value="v">V-</option>
+                                <option value="e">E-</option>
+                            </select>
+        
+                            <input 
+                            type="text" 
+                            name="cedula" 
+                            placeholder="12345678" 
+                            value={this.state.cedula}
+                            onChange={this.handleChange}
+                            />
+
+                        </div>
+
     
                         <input 
                         type="password" 
@@ -91,6 +99,8 @@ class LoginForm extends Component{
                         />
 
                     </div>
+
+        
     
                     {/*Conditional Rendering for errors*/}
     
@@ -123,13 +133,14 @@ class LoginForm extends Component{
                     <button 
                         type="submit" 
                         id="ingresar"
-                        >INGRESAR
+                        ><Link to="/usuario">INGRESAR</Link>
                     </button>
 
                     <button 
                         type="submit" 
                         id="registrarse"
-                        >REGISTRARSE
+                    >REGISTRARSE
+
                     </button>
 
                 </form>
