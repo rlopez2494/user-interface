@@ -2,9 +2,13 @@ import React from 'react';
 import logo from '../../img/udo-logo.png';
 import "./styles/Header.css";
 
-function Header() {
+function Header(props) {
+
+    console.log((props.switch) ? (null) : ("rgba( 000, 000, 000, 0.1);"));
     return(
-        <div id="header">
+        <div 
+            id="header" 
+            style={{backgroundColor: (props.switch) ? (null) : ("rgba( 000, 000, 000, 0.1)")}}>
             <div className="container">
                 
                 <div id="logo">

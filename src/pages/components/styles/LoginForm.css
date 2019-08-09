@@ -60,7 +60,7 @@
 }
 
 
-/***********************LOGIN FIELDS***************************/
+/*******************************LOGIN FIELDS*******************************/
 #login-fields {
     display: flex;
     flex-direction: column;
@@ -80,7 +80,8 @@
     left: 80px;
 }
 
-/*************************** MISCUE ******************************/
+
+/******************************* MISCUE ***********************************/
 #bienvenido {
     width: 200px;
     border-radius: 10px;
@@ -93,6 +94,16 @@
     position: relative;
     bottom: 18px;
     text-align: center;
+}
+
+#login-error {
+    margin: 12px 0;
+}
+
+#login-error p {
+    color: rgb(221, 16, 16);
+    padding: 0;
+    display: inline;
 }
 
 /***************************** MEDIA QUERIES ****************************/
