@@ -1,12 +1,12 @@
 import React from "react";
 import "./styles/SideBar.css";
 import profilePic from "../../img/profile.JPG"
-import {BrowserRouter as Link, NavLink} from "react-router-dom";
+import {BrowserRouter as Router, Link} from "react-router-dom";
 
 function SideBar() {
     return(
         <div id="sidebar">
-            
+            <Router>
             <div id="profile">
                 <div className="wrapper">
 
@@ -30,9 +30,25 @@ function SideBar() {
 
                     <p>Ajustes</p>
                     <ul>
-                        <li>Perfil</li>
-                        <li>Perfil</li>
-                        <li>Perfil</li>
+
+                        <li>
+                            <Link to="/usuario/configurarPerfil">
+                                <button>Configurar perfil</button>
+                            </Link>
+                        </li>
+
+                        <li>
+                            <Link to="/usuario/verificarIdentidad">
+                                <button>Verificar identidad</button>
+                            </Link>
+                        </li>
+
+                        <li>
+                            <Link to="/usuario/cambioClave">
+                                <button>Cambiar contraseña</button>
+                            </Link>
+                        </li>
+                     
                     </ul>
 
                 </div>
@@ -42,9 +58,9 @@ function SideBar() {
                     <p>Informacion</p>
 
                     <ul>
-                        <li>Perfil</li>
-                        <li>Perfil</li>
-                        <li>Perfil</li>
+                        <li>Candidatos</li>
+                        <li>Partidos</li>
+                        <li>Acerca de...</li>
                     </ul>
 
                 </div>
@@ -65,6 +81,7 @@ function SideBar() {
                 </div>
 
             </div>
+            </Router>
         </div>
     )
 }

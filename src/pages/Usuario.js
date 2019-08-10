@@ -7,7 +7,10 @@ import Header from "./components/Header";
 import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
 import LoginForm from "./components/LoginForm";
-import Candidatos from "./components/Candidatos"
+import Candidatos from "./components/Candidatos";
+import Voto from "./components/Voto";
+import ConfigurarPerfil from "./components/ConfigurarPerfil";
+import VerificarIdentidad from "./components/VerificarIdentidad";
 
 import "./styles/Usuario.css";
 
@@ -20,43 +23,47 @@ class Usuario extends Component {
 
         console.log(this.state.showSideBar);
         return(
-            <div id="usuario">
+            
+                <div id="usuario">
+                <Router>
+                    {
+                        (this.state.showSideBar) ? 
 
-                {
-                    (this.state.showSideBar) ? 
-
-                    (
-                        <div className="column" id="left">
-                            <SideBar />
-                        </div>
-                    ) :
+                        (
+                            <div className="column" id="left">
+                                <SideBar />
+                            </div>
+                        ) :
+                        
+                        (
+                            null
+                        )
+                    }
                     
-                    (
-                        null
-                    )
-                }
-                
 
-                <div className="column" id="right">
+                    <div className="column" id="right">
 
-                    <Header switch={ this.state.showSideBar } />
+                        <Header switch={ this.state.showSideBar } />
 
-                    <div id="main-section">
-                        <Router>
+                        <div id="main-section">
 
-                            <Route path="/" exact component={ LoginForm }/>
+                                <Route path="/" exact component={ LoginForm }/>
 
-                            <Route path="/usuario" exact component={Candidatos} />
-                            
-                        </Router>
+                                <Route path="/usuario" exact component={Candidatos} />
 
-                    </div>
+                                <Route path="/usuario/votar" component={ Voto } />
 
-                    <Footer switch={ this.state.showSideBar }/>
+                                <Route path="/usuario/configurarPerfil" component={ ConfigurarPerfil } />
 
-                </div>   
+                                <Route path="/usuario/verificarIdentidad" component={ VerificarIdentidad } />
+                                
+                        </div>
 
-            </div>
+                        <Footer switch={ this.state.showSideBar }/>
+
+                    </div>   
+                </Router>
+                </div>
         )
     }
 }
