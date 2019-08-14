@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import "./styles/VerificarIdentidad.css"
+import "./styles/VerificarIdentidad.css";
+
 
 class VerificarIdentidad extends Component {
     render() {

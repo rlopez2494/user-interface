@@ -3,6 +3,30 @@ import "./styles/ConfigurarPerfil.css"
 import profilePic from "../../img/profile.JPG"
 
 class configurarPerfil extends Component {
+
+    state = {
+        nombre: "",
+        apellido: "",
+        cedula: "",
+        llavePublica: "",
+        pais: "",
+        estado: "",
+        ciudad: "",
+        municipio: "",
+        parroquia: "",
+        urbanizacion: "",
+        calle: "",
+        casa: "",
+        masDetalles: "",
+    }
+
+    handleChange = (e) => {
+        const { name, value } = e.target
+        this.setState({
+            [name]: value
+        })
+    }
+
     render() {
         return (
             <div id="perfil-config">
@@ -34,22 +58,22 @@ class configurarPerfil extends Component {
 
                                 <div className="field">
                                     <label htmlFor="nombre">Nombre</label>
-                                    <input name="nombre" type="text" placeholder="Mario Casas" disabled/>
+                                    <input name="nombre" type="text" placeholder={this.state.nombre} disabled/>
                                 </div>
 
                                 <div className="field">
                                     <label htmlFor="cedula">Cedula</label>
-                                    <input name="cedula" type="text" placeholder="Mario Casas" disabled/>
+                                    <input name="cedula" type="text" placeholder={this.state.cedula} disabled/>
                                 </div>
 
                                 <div className="field">
                                     <label htmlFor="apellido">Apellido</label>
-                                    <input name="apellido" type="text" placeholder="Mario Casas" disabled/>
+                                    <input name="apellido" type="text" placeholder={this.state.apellido} disabled/>
                                 </div>
 
                                 <div className="field">
                                     <label htmlFor="llave-publica">Llave publica</label>
-                                    <input name="llavePublica" type="text" placeholder="Mario Casas" disabled/>
+                                    <input name="llavePublica" type="text" placeholder={this.state.llavePublica} disabled/>
                                 </div>
 
                         </div>
@@ -99,22 +123,22 @@ class configurarPerfil extends Component {
 
                             <div className="field">
                                 <label htmlFor="urbanizacion">Urbanizacion</label>
-                                <input name="urbanizacion" type="text"/>
+                                <input name="urbanizacion" type="text" onChange={this.handleChange} />
                             </div>
 
                             <div className="field">
                                 <label htmlFor="calle">Calle</label>
-                                <input name="calle" type="text"/>
+                                <input name="calle" type="text" onChange={this.handleChange} />
                             </div>
 
                             <div className="field">
                                 <label htmlFor="casa">Casa</label>
-                                <input name="casa" type="text"/>
+                                <input name="casa" type="text" onChange={this.handleChange} />
                             </div>
 
                             <div className="field">
-                                <label htmlFor="mas-detalles">Mas Detalles (opcional)</label>
-                                <input name="mas-detalles" type="text"/>
+                                <label htmlFor="masDetalles">Mas Detalles (opcional)</label>
+                                <input name="masDetalles" type="text" onChange={this.handleChange} />
                             </div>
 
                         </div>
