@@ -11,6 +11,9 @@ import Candidatos from "./components/Candidatos";
 import Voto from "./components/Voto";
 import ConfigurarPerfil from "./components/ConfigurarPerfil";
 import VerificarIdentidad from "./components/VerificarIdentidad";
+import CambioClave from "./components/CambioClave";
+import Partidos from "./components/Partidos";
+import AcercaDe from "./components/AcercaDe";
 
 import "./styles/Usuario.css";
 
@@ -56,6 +59,14 @@ class Usuario extends Component {
                                 <Route path="/usuario/configurarPerfil" component={ ConfigurarPerfil } />
 
                                 <Route path="/usuario/verificarIdentidad" component={ VerificarIdentidad } />
+
+                                <Route path="/usuario/cambioClave" component={ CambioClave } />
+
+                                <Route path="/usuario/candidatos" component={ Candidatos } />
+
+                                <Route path="/usuario/partidos" component={ Partidos } />
+
+                                <Route path="/usuario/acercaDe" component={ AcercaDe } />
                                 
                         </div>
 

@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles/SideBar.css";
 import profilePic from "../../img/profile.JPG"
-import {BrowserRouter as Router, Link} from "react-router-dom";
+import {BrowserRouter as Router, NavLink} from "react-router-dom";
 
 function SideBar() {
     return(
@@ -32,21 +32,21 @@ function SideBar() {
                     <ul>
 
                         <li>
-                            <Link to="/usuario/configurarPerfil">
+                            <NavLink to="/usuario/configurarPerfil">
                                 <button>Configurar perfil</button>
-                            </Link>
+                            </NavLink>
                         </li>
 
                         <li>
-                            <Link to="/usuario/verificarIdentidad">
+                            <NavLink to="/usuario/verificarIdentidad">
                                 <button>Verificar identidad</button>
-                            </Link>
+                            </NavLink>
                         </li>
 
                         <li>
-                            <Link to="/usuario/cambioClave">
+                            <NavLink to="/usuario/cambioClave">
                                 <button>Cambiar contraseña</button>
-                            </Link>
+                            </NavLink>
                         </li>
                      
                     </ul>
@@ -58,9 +58,25 @@ function SideBar() {
                     <p>Informacion</p>
 
                     <ul>
-                        <li>Candidatos</li>
-                        <li>Partidos</li>
-                        <li>Acerca de...</li>
+
+                        <li>
+                            <NavLink to="/usuario/candidatos">
+                                <button>Candidatos</button>
+                            </NavLink>
+                        </li>
+
+                        <li>
+                            <NavLink to="/usuario/partidos">
+                                <button>Partidos</button>
+                            </NavLink>
+                        </li>
+
+                        <li>
+                            <NavLink to="/usuario/acercaDe">
+                                <button>Acerca de...</button>
+                            </NavLink>
+                        </li>
+
                     </ul>
 
                 </div>

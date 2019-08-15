@@ -1,5 +1,11 @@
 #verificar-identidad {
     background: rgba(99, 175, 204, 0.55);
+    padding: 30px;
+    border-radius: 5px;
+}
+
+#verificar-identidad #opciones img {
+    height: 124px;
 }
 
 #verificar-identidad h1 {
@@ -11,29 +17,37 @@
     font-weight: bold;
     padding: 5px 10px;
     position: relative;
-    bottom: 18px;
+    bottom: 50px;
     text-align: center;
 }
 
 #verificar-identidad #opciones {
     background: #ffffff;
+    padding: 20px;
+    position: relative;
+    bottom: 10px;
 }
 
 #verificar-identidad #opciones ul {
     list-style-type: none;
     display: flex;
     padding: 0;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 #verificar-identidad #opciones ul li {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 10px;
 }
 
 #verificar-identidad #opciones button {
     background: #188EBD;
     color: #ffffff;
     border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 0 5px;
 }
+

@@ -2,7 +2,7 @@ import React from "react";
 import Candidato from "./Candidato";
 import "./styles/Candidatos.css";
 import candPicture from "../../img/cand-pic.jpg";
-import {BrowserRouter as Router, Route} from "react-router-dom";
+import {BrowserRouter as Router} from "react-router-dom";
 
 /* Imagenes de partidos (Hard Coded) */
 import ea from "../../img/partidos/EA.jpg";

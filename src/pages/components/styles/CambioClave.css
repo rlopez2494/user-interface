@@ -1,0 +1,40 @@
+#cambio-clave #opciones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#cambio-clave {
+    background: rgba(99, 175, 204, 0.55);
+    padding: 30px;
+    border-radius: 5px;
+}
+
+#cambio-clave h1 {
+    border-radius: 10px;
+    color: rgb(56, 133, 163);
+    background-color: #ffffff;  
+    margin: 0 auto;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px 10px;
+    position: relative;
+    bottom: 50px;
+    text-align: center;
+}
+
+#cambio-clave #opciones button {
+    font-weight: bold;
+    background: #188EBD; 
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 0;
+}
+
+#cambio-clave #opciones * {
+    margin-bottom: 10px;
+}
