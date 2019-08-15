@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../img/udo-logo.png';
+import logo from '../img/udo-logo.png';
 import "./styles/Header.css";
 
 function Header(props) {

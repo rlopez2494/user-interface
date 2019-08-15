@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./styles/ConfigurarPerfil.css"
-import profilePic from "../../img/profile.JPG"
+import profilePic from "../img/profile.JPG"
 
 class configurarPerfil extends Component {
 

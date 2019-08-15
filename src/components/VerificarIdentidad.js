@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import "./styles/VerificarIdentidad.css";
-import passport from "../../img/verificar/passport.png";
-import licencia from "../../img/verificar/licencia.png";
-import cedula from "../../img/verificar/cedula.png";
+import passport from "../img/verificar/passport.png";
+import licencia from "../img/verificar/licencia.png";
+import cedula from "../img/verificar/cedula.png";
 
 class VerificarIdentidad extends Component {
     render() {

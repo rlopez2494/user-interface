@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './styles/LoginForm.css';
-import Advertencia from '../../img/advertencia.jpg';
+import Advertencia from '../img/advertencia.jpg';
 import axios from 'axios';
 import { Link } from "react-router-dom";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles/SideBar.css";
-import profilePic from "../../img/profile.JPG"
+import profilePic from "../img/profile.JPG"
 import {BrowserRouter as Router, NavLink} from "react-router-dom";
 
 function SideBar() {
