@@ -6,7 +6,6 @@ import {BrowserRouter as Router, NavLink} from "react-router-dom";
 function SideBar() {
     return(
         <div id="sidebar">
-            <Router>
             <div id="profile">
                 <div className="wrapper">
 
@@ -97,7 +96,6 @@ function SideBar() {
                 </div>
 
             </div>
-            </Router>
         </div>
     )
 }

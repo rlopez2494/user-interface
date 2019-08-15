@@ -20,7 +20,6 @@ const Candidato = (props) => {
 
 
     return (
-        <Router>
         <div id="candidato">
 
             <img src={ candPicture } alt="candidato"/>
@@ -52,7 +51,6 @@ const Candidato = (props) => {
             </Link>
 
         </div>
-        </Router>
     );
 };
 

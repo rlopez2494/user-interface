@@ -20,16 +20,12 @@ function Candidatos() {
     return(
         <div id="candidatos">
 
-        <Router>
-
             <Candidato data={ data } />
             <Candidato data={ data } />
             <Candidato data={ data } />
             <Candidato data={ data } />
             <Candidato data={ data } />
             <Candidato data={ data } />
-            
-        </Router>
 
         </div>
     )
