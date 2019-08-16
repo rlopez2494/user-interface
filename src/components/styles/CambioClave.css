@@ -26,7 +26,7 @@
     text-align: center;
 }
 
-#cambio-clave #opciones button {
+#cambio-clave button {
     font-weight: bold;
     background: #188EBD; 
     color: #ffffff;
@@ -37,4 +37,61 @@
 
 #cambio-clave #opciones * {
     margin-bottom: 10px;
+}
+
+#cambio-clave #enviar #mensaje {
+    background: #ffffff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    color: #63AFCC;
+}
+
+#cambio-clave #enviar #botones {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#cambio-clave #enviar #mensaje, #cambio-clave #enviar #botones {
+    width: 500px;
+}
+
+#cambio-clave #enviar #botones button {
+    width: 120px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(0, 185, 255, 0.41);
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#cambio-clave #cambiar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFFFFF;
+    padding: 10px 10px 26px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+#cambio-clave #cambiar button, #cambio-clave #final button {
+    margin-top: 20px;
+    padding: 5px 15px;
+}
+
+#cambio-clave #final {
+    display: flex;
+    flex-direction: column;
+}
+
+#cambio-clave #final p {
+    background: #FFFFFF;
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 10px;
 }
