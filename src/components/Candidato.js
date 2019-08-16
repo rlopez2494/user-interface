@@ -1,9 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from "react-router-dom"
+import { BrowserRouter as Link} from "react-router-dom";
 
 const Candidato = (props) => {
 
-    const { candPicture, imgs} = props.data
+    const { candPicture, imgs } = props.data
 
 
     const candPartidos = imgs.map((img) => {
@@ -19,7 +19,7 @@ const Candidato = (props) => {
     })
 
 
-    return (
+    return(
         <div id="candidato">
 
             <img src={ candPicture } alt="candidato"/>
@@ -44,11 +44,11 @@ const Candidato = (props) => {
             </div>
 
 
-            <Link to="/usuario/votar">
-
-                <button>VOTAR</button>
-
-            </Link>
+            <button>
+                <Link to="/usuario/votar">
+                    VOTAR
+                </Link>
+            </button>
 
         </div>
     );

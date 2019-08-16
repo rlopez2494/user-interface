@@ -4,7 +4,7 @@
     border-radius: 5px;
 }
 
-#verificar-identidad #opciones img {
+#verificar-identidad #main img {
     height: 124px;
 }
 
@@ -21,28 +21,28 @@
     text-align: center;
 }
 
-#verificar-identidad #opciones {
+#verificar-identidad #main {
     background: #ffffff;
     padding: 20px;
     position: relative;
     bottom: 10px;
 }
 
-#verificar-identidad #opciones ul {
+#verificar-identidad #main ul {
     list-style-type: none;
     display: flex;
     padding: 0;
     justify-content: space-between;
 }
 
-#verificar-identidad #opciones ul li {
+#verificar-identidad #main ul li {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px;
 }
 
-#verificar-identidad #opciones button {
+#verificar-identidad #main button {
     background: #188EBD;
     color: #ffffff;
     border: none;
@@ -50,4 +50,70 @@
     width: 100%;
     border-radius: 0 5px;
 }
+
+#verificar-identidad #pasaporte {
+    display: flex;
+    background: #ffffff;
+}
+
+#verificar-identidad #pasaporte input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #707070;
+    color: #F6F6F6;
+}
+
+#verificar-identidad #pasaporte button {
+    background: #4D4A4A;
+    border: 1px solid #707070;
+    border-radius: 10px;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+#verificar-identidad #pasaporte button:first-of-type {
+    border-radius: 10px;
+    background: #F3F3F3;
+    border: 1px solid #272727;
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+
+#verificar-identidad #pasaporte h3 {
+    color: #DEDEDE;
+}
+
+#verificar-identidad #pasaporte #izquierda {
+    background: #514848;
+    padding: 10px;
+}
+
+#verificar-identidad #pasaporte #derecha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#verificar-identidad #subir {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFFFFF;
+    width: 400px;
+    text-align: center;
+    padding: 20px;
+}
+
+#verificar-identidad #subir button {
+    background: #188EBD;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#verificar-identidad #subir img {
+    border-radius: 50%;
+}
+
 
