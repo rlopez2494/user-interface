@@ -10,22 +10,91 @@ import esquerra from "../img/partidos/esquerra.jpg";
 import prc from "../img/partidos/prc.jpg";
 import psoe from "../img/partidos/PSOE.jpg";
 
-function Candidatos() {
+function Candidatos(props) {
 
     const data = {
         candPicture,
+
         imgs: [ea, esquerra, prc, psoe],
     }
 
-    return(
-        <div id="candidatos">
+    const styles = {
 
-            <Candidato data={ data } />
-            <Candidato data={ data } />
-            <Candidato data={ data } />
-            <Candidato data={ data } />
-            <Candidato data={ data } />
-            <Candidato data={ data } />
+        candidato: {
+            flexDirection: "row",
+            width: "95%",
+            justifyContent: "space-between",
+            height: "auto",
+            borderRadius: "10px",
+            overflow: "hidden"
+        },
+
+        candPicture: {
+            width: 200, 
+            height: 150
+        },
+
+        partidos: {
+            width: "auto",
+            margin: 0,
+        },
+
+        partidosUl: {
+            margin: "auto 10px",
+            width: 150
+        },
+
+        candidatoButton: {
+            display: "none"
+        },
+
+        candPartidos: {
+            width: "50px",
+            margin: 10,
+        }
+
+    }
+
+    const { path } = props.match;
+
+    const showCase = (path === "/usuario/candidatos");
+
+    return(
+        <div 
+        id="candidatos"
+
+        style={(showCase) ? {alignItems: "stretch"} : null}
+        >
+
+            <Candidato 
+                data={ data } 
+                styles={(showCase) ? styles : null}
+            />
+
+            <Candidato 
+                data={ data } 
+                styles={(showCase) ? styles : null}
+            />
+
+            <Candidato 
+                data={ data } 
+                styles={(showCase) ? styles : null}
+            />
+
+            <Candidato 
+                data={ data } 
+                styles={(showCase) ? styles : null}
+            />
+
+            <Candidato 
+                data={ data } 
+                styles={(showCase) ? styles : null}
+            />
+
+            <Candidato 
+                data={ data } 
+                styles={(showCase) ? styles : null}
+            />
 
         </div>
     )
