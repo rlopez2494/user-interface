@@ -2,7 +2,7 @@ import React from 'react';
 import "./styles/Footer.css";
 
 function Footer(props) {
-    console.log(props);
+
     return(
         <div style={{display: (props.switch) ? ("none") : ("flex")}} id="footer">
 

@@ -30,7 +30,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .App {
