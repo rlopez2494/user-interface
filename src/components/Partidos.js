@@ -57,6 +57,7 @@ class Partidos extends Component{
 
                 <button
                     onClick={this.handleClick}
+                    className="Button"
     
                 >CANDIDATOS</button>
             </div>
@@ -65,7 +66,7 @@ class Partidos extends Component{
 
     render() {
         return (
-            <div id="partidos">
+            <div id="partidos" className="main-box">
     
                 {
                     this.newPartidos

@@ -61,7 +61,7 @@ class LoginForm extends Component{
         return(
             <div id="login-form">
     
-                <p id="bienvenido">BIENVENIDO</p>
+                <p className="highlight">BIENVENIDO</p>
     
                 <div id="login-fields">
     

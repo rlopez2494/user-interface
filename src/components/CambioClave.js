@@ -103,9 +103,9 @@ class CambioClave extends Component {
 
                 {
                     (this.state.stage === "enviar") ?
-                        <h1>CONFIRMAR</h1>
+                        <h1 className="highlight">CONFIRMAR</h1>
                     :
-                        <h1>CAMBIAR CONTRASEÑA</h1>
+                        <h1 className="highlight">CAMBIAR CONTRASEÑA</h1>
                 }
                 
                 {

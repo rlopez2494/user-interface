@@ -18,7 +18,9 @@ import AcercaDe from "./components/AcercaDe";
 class App extends Component {
 
   state = {
+
     showSideBar: true
+    
   }
 
   render() {
@@ -51,8 +53,6 @@ class App extends Component {
                       <Route path="/" exact component={ LoginForm }/>
   
                       <Route path="/usuario" exact component={Candidatos} />
-  
-                      <Route path="/usuario/votar" component={ Voto } />
   
                       <Route path="/usuario/configurarPerfil" component={ ConfigurarPerfil } />
   

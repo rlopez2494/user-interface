@@ -1,5 +1,4 @@
 #partidos {
-    height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -30,11 +29,6 @@
 
 #partido button {
     margin: 0 15px;
-    border-radius: 15px;
-    font-weight: bold;
-    color: #ffffff;
-    background: #577BA4;
-    border: 1px solid #707070;
     padding: 5px 10px;
 }
 

@@ -62,7 +62,7 @@ function Candidatos(props) {
     return(
         <div 
         id="candidatos"
-
+        className="main-box"
         style={(showCase) ? {alignItems: "stretch"} : null}
         >
 

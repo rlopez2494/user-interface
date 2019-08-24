@@ -8,9 +8,6 @@
 }
 
 #candidatos {
-    padding-top: 20px;
-    height: 100%;
-    width: 95%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;

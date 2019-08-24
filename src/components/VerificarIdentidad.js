@@ -43,6 +43,7 @@ class VerificarIdentidad extends Component {
                             <button
                                 name="pasaporte"
                                 onClick={this.handleClick}
+                                className="Button"
                             >Pasaporte</button>
 
                         </li>
@@ -53,6 +54,7 @@ class VerificarIdentidad extends Component {
                             <button
                                 name="licencia"
                                 onClick={this.handleClick}
+                                className="Button"
                             >Licencia de conducir</button>
 
                         </li>
@@ -62,6 +64,7 @@ class VerificarIdentidad extends Component {
                             <button
                                 name="cedula"
                                 onClick={this.handleClick}
+                                className="Button"
                             >Cedula de identidad</button>
                         </li>
 
@@ -96,6 +99,7 @@ class VerificarIdentidad extends Component {
                             <button
                                 name="subir"
                                 onClick={this.handleClick}
+                                className="Button"
                             >Subir</button>
 
                         </div>
@@ -123,7 +127,7 @@ class VerificarIdentidad extends Component {
                         debe esperar de 3 a 5 dias habiles para la revision y 
                         confirmacion de este.</p>
 
-                        <button>Volver a la pagina principal</button>
+                        <button className="Button">Volver a la pagina principal</button>
                         
                     </div>
                 )
@@ -140,7 +144,7 @@ class VerificarIdentidad extends Component {
                     (this.state.stage === "subir") ? 
                         null
                     :
-                        <h1>CARGAR DOCUMENTO</h1>
+                        <h1 className="highlight">CARGAR DOCUMENTO</h1>
                 }
 
                 {
