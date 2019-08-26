@@ -2,6 +2,7 @@ body {
   background: url('./img/background.png') no-repeat center center fixed;
   background-size: cover;
   /* background-color: #282c34; */
+  min-width: 320px;
 }
 
 .Button {

@@ -102,4 +102,12 @@
     border-radius: 50%;
 }
 
+/************************Media Queries********************************/
+
+@media screen and (max-width: 960px) {
+    #verificar-identidad #main ul {
+        flex-direction: column;
+    }
+}
+
 
