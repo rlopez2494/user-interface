@@ -130,11 +130,14 @@ class LoginForm extends Component{
     
                 <form onSubmit={this.handleSubmit}>
 
-                    <button 
-                        type="submit" 
-                        id="ingresar"
-                        ><Link to="/usuario">INGRESAR</Link>
-                    </button>
+                    <Link to="/usuario">
+                        <button 
+                            type="submit" 
+                            id="ingresar"
+                            >INGRESAR
+                        </button>
+                    </Link>
+                    
 
                     <button 
                         type="submit" 

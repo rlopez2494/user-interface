@@ -26,7 +26,8 @@ function Candidatos(props) {
             justifyContent: "space-between",
             height: "auto",
             borderRadius: "10px",
-            overflow: "hidden"
+            overflow: "hidden",
+            alignItems: "stretch",
         },
 
         candPicture: {

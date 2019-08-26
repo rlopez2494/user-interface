@@ -3,7 +3,9 @@ import "./styles/AcercaDe.css";
 
 const AcercaDe = () => {
     return (
-        <div id="acerca-de">
+        <div className="main-box">
+
+            <div id="acerca-de">
 
             <h1>Acerca de...</h1>
 
@@ -30,7 +32,7 @@ const AcercaDe = () => {
                     <div>
 
                         <h3>Integrantes</h3>
-                        <p>Caigua Nu;ez, Leurise Carmen Julia</p>
+                        <p>Caigua Nuñez, Leurise Carmen Julia</p>
                         <p>Lopez Salazar, Robert Jose</p>
 
                     </div>
@@ -46,6 +48,8 @@ const AcercaDe = () => {
                 </div>
 
             </div>
+
+        </div>
 
         </div>
     );
