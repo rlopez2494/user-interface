@@ -1,23 +1,14 @@
+/************************** #perfil-config **************************/
 #perfil-config {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f5f5f5;
     height: 100%;
     width: 100%;
 }
 
 #perfil-config label {
     font-weight: bold;
-}
-
-#cambio-foto button {
-    margin: 15px 0;
-}
-
-#cambio-foto div:first-child button {
-    background: #AB2F2F;
-    color: #FFFFFF;
 }
 
 #perfil-config img {
@@ -30,13 +21,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 95%;
-    height: 95%;
-}
-
-#direccion select{
-    padding: 4px 1px;
-    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background: #f5f5f5;
 }
 
 #perfil-config #guardar {
@@ -53,6 +40,42 @@
     padding: 8px 5px;
     font-size: 1.2em;
     border: 1px solid #707070;
+}
+
+#perfil-config #wrapper #persona {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#perfil-config #wrapper #datos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+}
+
+#perfil-config #datos input, #perfil-config #datos label {
+    margin: 0 5px;
+}
+
+#perfil-config .field {
+    display: flex;
+    flex-direction: column;
+}
+
+/*********************** #cambio-foto ***************************/
+
+#cambio-foto button {
+    margin: 15px 0;
+}
+
+#cambio-foto div:first-child button {
+    background: #AB2F2F;
+    color: #FFFFFF;
+}
+
+#persona #cambio-foto div:first-child {
+    margin-right: 25px;
 }
 
 #cambio-foto #cambiar {
@@ -73,32 +96,6 @@
     margin: 10px 0;
 }
 
-#perfil-config #wrapper #persona {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-#perfil-config #wrapper #datos {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 20px;
-}
-
-#perfil-config .field {
-    display: flex;
-    flex-direction: column;
-}
-
-#direccion #selects .field {
-    margin-bottom: 10px;
-}
-
-#direccion h1 {
-    margin-left: 22px;
-    text-decoration: underline;
-}
-
 #cambio-foto {
     display: flex;
     border: 1px solid #707070;
@@ -106,10 +103,26 @@
     padding: 0 15px;
 }
 
+/*********************** #direccion *************************/
+
 #direccion {
     display: flex;
     flex-direction: column;
     background: #7F98A7;
+}
+
+#direccion #selects .field {
+    margin-bottom: 10px;
+}
+
+#direccion select {
+    padding: 4px 1px;
+    border-radius: 10px;
+}
+
+#direccion h1 {
+    margin-left: 22px;
+    text-decoration: underline;
 }
 
 #direccion #mid {
@@ -129,3 +142,48 @@
     justify-content: space-between;
 }
 
+/********************* Responsive Design *********************/
+
+@media screen and (max-width: 450px) {
+
+    #perfil-config {
+        align-items: flex-start;
+    }
+
+    #perfil-config #wrapper {
+        justify-content: flex-start;
+        height: auto;
+        align-items: center;
+    }
+
+    #perfil-config #wrapper #persona {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    #perfil-config #wrapper div {
+        margin: 10px 0;
+    }
+
+    #direccion {
+        align-items: center;
+        width: 98%;
+        border-radius: 5px;
+    }
+
+    #direccion #mid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #direccion #mid #selects, #direccion #mid #campos {
+        width: 90%;
+    }
+
+    #direccion h1 {
+        text-align: center;
+        width: 80%;
+        margin: 25px 0;
+    }
+
+}

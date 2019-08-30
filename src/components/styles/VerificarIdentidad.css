@@ -2,6 +2,11 @@
     background: rgba(99, 175, 204, 0.55);
     padding: 30px;
     border-radius: 5px;
+    margin: auto;
+}
+
+#verificar-identidad button {
+    outline: none;
 }
 
 /*********************Main Area****************************/
@@ -86,7 +91,7 @@
     flex-direction: column;
     align-items: center;
     background: #FFFFFF;
-    width: 400px;
+    max-width: 400px;
     text-align: center;
     padding: 20px;
 }
@@ -102,12 +107,44 @@
     border-radius: 50%;
 }
 
-/************************Media Queries********************************/
+/************************Responsive Design********************************/
 
 @media screen and (max-width: 960px) {
     #verificar-identidad #main ul {
         flex-direction: column;
     }
+}
+
+@media screen and (max-width: 450px) {
+
+    #verificar-identidad {
+        width: 80%;
+    }
+
+    #verificar-identidad #pasaporte {
+        flex-direction: column;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    #verificar-identidad #pasaporte #derecha {
+        order: -1;
+    }
+
+    #verificar-identidad #pasaporte #izquierda {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #verificar-identidad #pasaporte h3 {
+        text-align: center;
+    }
+
+    #verificar-identidad #pasaporte input {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
 }
 
 

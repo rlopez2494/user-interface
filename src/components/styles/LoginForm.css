@@ -83,6 +83,10 @@
 
 /******************************* MISCUE ***********************************/
 
+#login-form p:first-child {
+    bottom: 20px;
+}
+
 #login-error {
     margin: 12px 0;
 }
@@ -126,10 +130,13 @@
 }
 
 @media screen and (max-width: 360px) {
-    #ingresar, #registrarse {
-        float: none;
-        display: block;
-        margin: 0 auto 10px auto;
+    #login-form form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #ingresar {
+        margin-bottom: 10px;
     }
 }
 

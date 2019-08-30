@@ -10,7 +10,7 @@
     width: 95%;
     margin: 10px auto;
     border-radius: 20px;
-
+    text-overflow: ellipsis;
 }
 
 #partido h3 {
@@ -98,5 +98,26 @@
     padding: 5px 10px;
 }
 
+@media screen and (max-width: 450px) {
+    #partido {
+        flex-direction: column;
+    }
+
+    #partido #description {
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid #030303;
+        border-bottom: 1px solid #030303; 
+    }
+
+    #partido img {
+        height: 200px;
+        width: 100%;
+    }
+
+    #partido button {
+        margin: 20px 0;
+    }
+}
 
 

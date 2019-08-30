@@ -2,15 +2,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     background: #ffffff;
     padding: 20px;
     border-radius: 10px;
+    text-align: center;
 }
 
 #cambio-clave {
     background: rgba(99, 175, 204, 0.55);
     padding: 30px;
     border-radius: 5px;
+    max-width: 400px;
+    margin: auto;
 }
 
 #cambio-clave button {
@@ -19,11 +23,16 @@
     color: #ffffff;
     border: none;
     border-radius: 10px;
-    padding: 5px 0;
+    padding: 5px 10px;
 }
 
 #cambio-clave #opciones * {
     margin-bottom: 10px;
+}
+
+#cambio-clave #enviar {
+    display: flex;
+    flex-direction: column;
 }
 
 #cambio-clave #enviar #mensaje {
@@ -39,10 +48,6 @@
     justify-content: center;
     justify-content: space-around;
     margin-top: 20px;
-}
-
-#cambio-clave #enviar #mensaje, #cambio-clave #enviar #botones {
-    width: 500px;
 }
 
 #cambio-clave #enviar #botones button {
@@ -81,4 +86,10 @@
     padding: 20px 10px;
     text-align: center;
     border-radius: 10px;
+}
+
+@media screen and (max-width: 450px) {
+    #cambio-clave {
+        width: 80%;
+    }
 }
