@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles/SideBar.css";
 import profilePic from "../img/profile.JPG"
+import exclamacion from "../img/exclamacion.png"
 import {BrowserRouter as Router, NavLink} from "react-router-dom";
 
 function SideBar() {
@@ -84,7 +85,11 @@ function SideBar() {
 
                     <div id="importante">
                         <h4>IMPORTANTE</h4>
-                        <img src="" alt="hey"/>
+                        <img 
+                        src={exclamacion} 
+                        alt="hey"
+                        width="30"
+                        height="30"/>
                     </div>
                     
                     <p>Si no haz verificado tu cuenta no 

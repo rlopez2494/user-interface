@@ -1,8 +1,31 @@
 body {
-  background: url('./img/background.png') no-repeat center center fixed;
+  background: url('./img/background.png') 
+  no-repeat center center fixed;
+  
   background-size: cover;
   /* background-color: #282c34; */
   min-width: 320px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0); 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555; 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(58, 58, 58); 
 }
 
 .Button {
@@ -55,6 +78,7 @@ body {
   align-items: center;
   height: 100%;
   overflow-y: scroll;
+  
 }
 
 .App {
