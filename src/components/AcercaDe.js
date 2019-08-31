@@ -3,9 +3,8 @@ import "./styles/AcercaDe.css";
 
 const AcercaDe = () => {
     return (
-        <div className="main-box">
 
-            <div id="acerca-de">
+        <div id="acerca-de">
 
             <h1>Acerca de...</h1>
 
@@ -51,7 +50,7 @@ const AcercaDe = () => {
 
         </div>
 
-        </div>
+       
     );
 };
 
