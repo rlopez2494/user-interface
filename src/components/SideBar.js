@@ -7,8 +7,7 @@ import {BrowserRouter as Router, NavLink} from "react-router-dom";
 function SideBar(props) {
 
     const { pathname } = props.location;
-    console.log(pathname);
-
+    
     return(
         <div 
         id="sidebar"

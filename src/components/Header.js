@@ -5,7 +5,6 @@ import "./styles/Header.css";
 function Header(props) {
 
     const { pathname } = props.location;
-    console.log(pathname);
 
     return(
         <div 

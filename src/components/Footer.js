@@ -4,7 +4,6 @@ import "./styles/Footer.css";
 function Footer(props) {
 
     const { pathname } = props.location;
-    console.log(pathname)
 
     return(
         <div style={{display: (pathname !== "/") ? ("none") : ("flex")}} id="footer">

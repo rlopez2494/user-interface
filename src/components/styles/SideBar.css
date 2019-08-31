@@ -5,7 +5,12 @@
     height: 100%;
     width: 220px;
     background-color: #1B252B;
+}
 
+#sidebar .options, 
+#sidebar #navigation input,  
+#sidebar #aviso {
+    margin: 15px 0;
 }
 
 #profile {
@@ -111,9 +116,11 @@
 }
 
 @media screen and (max-height: 750px) {
-    #aviso {
-        display: none;
+    
+    #sidebar {
+        overflow-y: scroll;
     }
+    
 }
 
 @media screen and (max-width: 820px) {
