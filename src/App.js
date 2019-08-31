@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route} from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 /*Components imports */
 import Header from "./components/Header";
@@ -8,12 +9,16 @@ import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
 import LoginForm from "./components/LoginForm";
 import Candidatos from "./components/Candidatos";
-import Voto from "./components/Voto";
 import ConfigurarPerfil from "./components/ConfigurarPerfil";
 import VerificarIdentidad from "./components/VerificarIdentidad";
 import CambioClave from "./components/CambioClave";
 import Partidos from "./components/Partidos";
 import AcercaDe from "./components/AcercaDe";
+
+/* withRouter Components */
+const SideBarWithRouter = withRouter(SideBar);
+const HeaderWithRouter = withRouter(Header);
+const FooterWithRouter = withRouter(Footer);
 
 class App extends Component {
 
@@ -28,25 +33,14 @@ class App extends Component {
       <Router>
 
         <div className="App">
-  
-          {
-              (this.state.showSideBar) ? 
-  
-              (
-                  <div className="column" id="left">
-                      <SideBar />
-                  </div>
-              ) :
-              
-              (
-                  null
-              )
-          }
-          
+        
+          <div className="column" id="left">
+              <SideBarWithRouter />
+          </div>
   
           <div className="column" id="right">
   
-              <Header switch={ this.state.showSideBar } />
+              <HeaderWithRouter />
   
               <div id="main-section">
   
@@ -68,7 +62,7 @@ class App extends Component {
                       
               </div>
   
-              <Footer switch={ this.state.showSideBar }/>
+              <FooterWithRouter/>
   
           </div>   
   

@@ -4,11 +4,13 @@ import "./styles/Header.css";
 
 function Header(props) {
 
-    console.log((props.switch) ? (null) : ("rgba( 000, 000, 000, 0.1);"));
+    const { pathname } = props.location;
+    console.log(pathname);
+
     return(
         <div 
             id="header" 
-            style={{backgroundColor: (props.switch) ? (null) : ("rgba( 000, 000, 000, 0.1)")}}>
+            style={{backgroundColor: (pathname !== "/") ? (null) : ("rgba( 000, 000, 000, 0.1)")}}>
             <div className="container">
                 
                 <div id="logo">
@@ -21,7 +23,7 @@ function Header(props) {
 
                 </div>
 
-                <a href="">SABER MAS</a>
+                <a href="">{(pathname === "/") ? "SABER MAS" : "CERRAR SESION"}</a>
             
             </div>
         </div>

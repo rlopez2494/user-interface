@@ -4,9 +4,16 @@ import profilePic from "../img/profile.JPG"
 import exclamacion from "../img/exclamacion.png"
 import {BrowserRouter as Router, NavLink} from "react-router-dom";
 
-function SideBar() {
+function SideBar(props) {
+
+    const { pathname } = props.location;
+    console.log(pathname);
+
     return(
-        <div id="sidebar">
+        <div 
+        id="sidebar"
+        style={{display: (pathname === "/") ? "none" : null}}
+        >
             <div id="profile">
                 <div className="wrapper">
 
