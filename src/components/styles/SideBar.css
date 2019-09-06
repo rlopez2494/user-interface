@@ -5,6 +5,7 @@
     height: 100%;
     width: 220px;
     background-color: #1B252B;
+    z-index: 1;
 }
 
 #sidebar .options, 
@@ -125,6 +126,7 @@
 
 @media screen and (max-width: 820px) {
     #sidebar {
-        display: none;
+        left: -220px;
+        position: fixed;
     }
 }

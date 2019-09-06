@@ -14,7 +14,18 @@ function Header(props) {
                 
                 <div id="logo">
 
-                    <img src={ logo } alt="udo-logo-color" width="70" height="70" />
+                    <button
+                        onClick={props.handleBar}
+                        name="toggleOn"
+                        id="toggleOn"
+                    >Sidebar</button>
+
+                    <img 
+                        src={ logo } 
+                        alt="udo-logo-color"
+                        width="70" 
+                        height="70" 
+                     />
 
                     <div>
                         <h1>sistema electoral electronico</h1>

@@ -4,11 +4,14 @@
     text-transform: uppercase;
     color: #ffffff;
     font-size: 10px;
-    
 }
 
 #header #logo {
     display: flex;
+}
+
+#header #logo button {
+    display: none;
 }
 
 #header img {
@@ -41,5 +44,11 @@
         margin: 10px 0;
         font-weight: bold;
         text-decoration: underline;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    #header #logo button {
+        display: inline-block;
     }
 }

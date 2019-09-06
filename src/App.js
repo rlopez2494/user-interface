@@ -1,3 +1,4 @@
+/* React, React Router imports*/
 import React, { Component } from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route} from "react-router-dom";
@@ -24,8 +25,19 @@ class App extends Component {
 
   state = {
 
-    showSideBar: true
+    showSideBar: false
     
+  }
+
+  handleBar = (event) => {
+    console.log(event.target.name);
+    const toggle = event.target.name;
+    const { showSideBar } = this.state;
+
+    this.setState({
+      showSideBar: (toggle === "toggleOn") ? true : false 
+    });
+
   }
 
   render() {
@@ -34,13 +46,30 @@ class App extends Component {
 
         <div className="App">
         
-          <div className="column" id="left">
-              <SideBarWithRouter />
+          <div 
+            className="column" 
+            id="left">
+
+              <SideBarWithRouter 
+                showSideBar={this.state.showSideBar} />
+
           </div>
   
-          <div className="column" id="right">
-  
-              <HeaderWithRouter />
+          <div 
+            className="column" 
+            id="right">
+
+            {
+              (this.state.showSideBar) ?
+
+              <div id="overlay" onClick={this.handleBar}></div>
+
+              :
+
+              null
+            }
+            
+              <HeaderWithRouter handleBar={this.handleBar} />
   
               <div id="main-section">
   

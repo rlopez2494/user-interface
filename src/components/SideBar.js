@@ -7,11 +7,17 @@ import {BrowserRouter as Router, NavLink} from "react-router-dom";
 function SideBar(props) {
 
     const { pathname } = props.location;
+    const { showSideBar } = props;
     
     return(
         <div 
         id="sidebar"
-        style={{display: (pathname === "/") ? "none" : null}}
+        style={
+            {
+                display: (pathname === "/") ? "none" : null,
+                left: (showSideBar) ? 0 : null
+            }
+        }
         >
             <div id="profile">
                 <div className="wrapper">
