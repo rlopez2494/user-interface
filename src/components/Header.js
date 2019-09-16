@@ -1,11 +1,15 @@
 import React from 'react';
 import logo from '../img/udo-logo.png';
 import "./styles/Header.css";
+import Rpp from "./Rpp"
 
 function Header(props) {
 
-    const { pathname } = props.location;
+    /* Invocacion de la funcion de conteo en el header */
+    Rpp()
 
+    const { pathname } = props.location;
+ 
     return(
         <div 
             id="header" 
