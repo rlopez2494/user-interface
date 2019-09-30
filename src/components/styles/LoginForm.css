@@ -43,9 +43,9 @@
 
 #login-form button {
     width: 120px;
-    border: 1px solid #00B9FF;
+    border: none;
     border-radius: 10px;
-    background: #00B9FF;
+    background: rgba(0, 185, 255, 0.41);
     color: #eee;
     font-size: 13px;
     font-weight: bold;

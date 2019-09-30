@@ -15,6 +15,7 @@ import VerificarIdentidad from "./components/VerificarIdentidad";
 import CambioClave from "./components/CambioClave";
 import Partidos from "./components/Partidos";
 import AcercaDe from "./components/AcercaDe";
+import Planchas from "./components/Planchas";
 
 /* withRouter Components */
 const SideBarWithRouter = withRouter(SideBar);
@@ -89,6 +90,10 @@ class App extends Component {
   
                       <Route path="/usuario/acercaDe" component={ AcercaDe } />
                       
+                      <Route path="/admin" exact component={ LoginForm }/>
+
+                      <Route path="/admin/:admin_id" exact component={ Planchas }/>
+
               </div>
   
               <FooterWithRouter/>

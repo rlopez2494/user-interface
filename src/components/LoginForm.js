@@ -13,6 +13,21 @@ class LoginForm extends Component{
         password: ""
     }
 
+    dataCall = (bearerToken) => {
+        axios.post('http://localhost:9000/usuario', {
+            headers: {
+                'authorization': `Bearer ${bearerToken}`
+            }
+        })
+        .then((response) => {
+            console.log(response.data.user["_id"])
+            this.props.history.push("/admin/" + response.data.user["_id"])
+        })
+        .catch((err) => {
+            console.log(err)
+        })
+    }
+
     apiCall = () => {
 
         const { cedula, password } = this.state;
@@ -24,6 +39,10 @@ class LoginForm extends Component{
         })
         .then((response) => {
             console.log(response.data);
+
+            const bearerToken = response.data
+            this.dataCall(bearerToken)
+            
             // const error = response.data;
             
 
@@ -59,7 +78,18 @@ class LoginForm extends Component{
 
     render() {
         return(
-            <div id="login-form">
+            <div 
+                id="login-form"
+                style={
+                    {
+                        backgroundColor: 
+                        (this.props.match.url === "/admin") ? 
+                        "rgba(0, 49, 75, 0.73)" 
+                        : 
+                        null 
+                    }
+                }
+            >
     
                 <p className="highlight">BIENVENIDO</p>
     
@@ -130,21 +160,25 @@ class LoginForm extends Component{
     
                 <form onSubmit={this.handleSubmit}>
 
-                    <Link to="/usuario">
+                    
                         <button 
                             type="submit" 
                             id="ingresar"
                             >INGRESAR
                         </button>
-                    </Link>
+                    
                     
 
-                    <button 
-                        type="submit" 
-                        id="registrarse"
-                    >REGISTRARSE
-
-                    </button>
+                    {
+                        (this.props.match.url === "/admin") ?
+                        null
+                        :
+                        <button 
+                            type="submit" 
+                            id="registrarse"
+                            >REGISTRARSE
+                        </button>
+                    }
 
                 </form>
                 

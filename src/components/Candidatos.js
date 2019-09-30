@@ -45,7 +45,7 @@ function Candidatos(props) {
             width: 150
         },
 
-        candidatoButton: {
+        Button: {
             display: "none"
         },
 
@@ -58,7 +58,7 @@ function Candidatos(props) {
 
     const { path } = props.match;
 
-    const showCase = (path === "/usuario/candidatos");
+    const showCase = (path === "/usuario/s");
 
     return(
         <div 
@@ -67,35 +67,27 @@ function Candidatos(props) {
         style={(showCase) ? {alignItems: "stretch"} : null}
         >
 
-            <Candidato 
+            <Candidato
                 data={ data } 
                 styles={(showCase) ? styles : null}
             />
 
-            <Candidato 
+            <Candidato
                 data={ data } 
                 styles={(showCase) ? styles : null}
             />
 
-            <Candidato 
+            <Candidato
                 data={ data } 
                 styles={(showCase) ? styles : null}
             />
 
-            <Candidato 
+            <Candidato
                 data={ data } 
                 styles={(showCase) ? styles : null}
             />
 
-            <Candidato 
-                data={ data } 
-                styles={(showCase) ? styles : null}
-            />
-
-            <Candidato 
-                data={ data } 
-                styles={(showCase) ? styles : null}
-            />
+            
 
         </div>
     )

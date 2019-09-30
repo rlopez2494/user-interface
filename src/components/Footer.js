@@ -6,7 +6,7 @@ function Footer(props) {
     const { pathname } = props.location;
 
     return(
-        <div style={{display: (pathname !== "/") ? ("none") : ("flex")}} id="footer">
+        <div style={{display: (pathname !== "/" && pathname !== "/admin") ? ("none") : ("flex")}} id="footer">
 
             <div className="container">
 

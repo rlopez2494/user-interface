@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../img/udo-logo.png';
 import "./styles/Header.css";
-
+import { BrowserRouter as  Router, Link } from "react-router-dom"
 
 function Header(props) {
 
@@ -13,7 +13,17 @@ function Header(props) {
     return(
         <div 
             id="header" 
-            style={{backgroundColor: (pathname !== "/") ? (null) : ("rgba( 000, 000, 000, 0.1)")}}>
+            style={
+                {
+                    backgroundColor: (pathname !== "/") ? 
+
+                    (pathname !== "/admin")? 
+                    (null) : "rgba(0, 49, 75, 0.73)"  
+
+                    : 
+
+                    ("rgba( 000, 000, 000, 0.1)")}}>
+
             <div className="container">
                 
                 <div id="logo">
@@ -37,7 +47,16 @@ function Header(props) {
 
                 </div>
 
-                <a href="">{(pathname === "/") ? "SABER MAS" : "CERRAR SESION"}</a>
+                {
+                    (pathname === "/") ? 
+                        <Link to="/admin">ADMIN</Link> 
+                        : 
+                        (pathname === "/admin") ?
+                        <Link to="/">VOTANTE</Link> 
+                        :
+                        <Link to="/">CERRAR SESION</Link>
+     
+                }
             
             </div>
         </div>

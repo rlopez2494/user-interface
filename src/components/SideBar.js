@@ -14,7 +14,7 @@ function SideBar(props) {
         id="sidebar"
         style={
             {
-                display: (pathname === "/") ? "none" : null,
+                display: (pathname === "/" || pathname === "/admin") ? "none" : null,
                 left: (showSideBar) ? 0 : null
             }
         }
