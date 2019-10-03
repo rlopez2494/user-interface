@@ -16,6 +16,7 @@ import CambioClave from "./components/CambioClave";
 import Partidos from "./components/Partidos";
 import AcercaDe from "./components/AcercaDe";
 import Planchas from "./components/Planchas";
+import PlanchaRegistro from './components/PlanchaRegistro';
 
 /* withRouter Components */
 const SideBarWithRouter = withRouter(SideBar);
@@ -33,7 +34,6 @@ class App extends Component {
   handleBar = (event) => {
     console.log(event.target.name);
     const toggle = event.target.name;
-    const { showSideBar } = this.state;
 
     this.setState({
       showSideBar: (toggle === "toggleOn") ? true : false 
@@ -93,6 +93,9 @@ class App extends Component {
                       <Route path="/admin" exact component={ LoginForm }/>
 
                       <Route path="/admin/:admin_id" exact component={ Planchas }/>
+
+                      <Route path="/admin/:admin_id/planchaRegistro" exact component={ PlanchaRegistro }/>
+
 
               </div>
   

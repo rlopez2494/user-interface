@@ -2,10 +2,14 @@ import React from "react";
 import vacio from "../img/plancha-foto.png"
 
 function Plancha(props) {
-    console.log(props)
+    console.log(props.routeProps)
+    const {history} = props.routeProps;
+    const {pathname} = props.routeProps.location
+    
 
     const handleClick = () => {
         console.log("hey")
+        history.push(`${pathname}/planchaRegistro`)
     }
     
     return(

@@ -58,7 +58,7 @@ function Candidatos(props) {
 
     const { path } = props.match;
 
-    const showCase = (path === "/usuario/s");
+    const showCase = (path === "/usuario/");
 
     return(
         <div 

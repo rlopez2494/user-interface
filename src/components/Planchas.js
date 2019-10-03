@@ -116,14 +116,30 @@ class Planchas extends Component{
                         </div>
                     </div>   
                 </div>
-                <Plancha handleClick={this.handleClick}/>
-                <Plancha handleClick={this.handleClick}/>
-                <Plancha handleClick={this.handleClick}/>
-                <Plancha handleClick={this.handleClick}/>
-                <Plancha handleClick={this.handleClick}/>
+                <Plancha 
+                    handleClick={this.handleClick}
+                    routeProps={this.props}
+                />
+                <Plancha 
+                    handleClick={this.handleClick}
+                    routeProps={this.props}
+                />
+                <Plancha 
+                    handleClick={this.handleClick}
+                    routeProps={this.props}
+                />
+                <Plancha 
+                    handleClick={this.handleClick}
+                    routeProps={this.props}
+                />
+                <Plancha 
+                    handleClick={this.handleClick}
+                    routeProps={this.props}
+                />
                 <Plancha 
                     handleClick={this.handleClick}
                     tipo="agregarPlancha"
+                    routeProps={this.props}
                 />
             </div>
         );

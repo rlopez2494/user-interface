@@ -55,9 +55,17 @@ body {
   text-align: center;
 }
 
+#main-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow-y: scroll;
+}
+
 .main-box {
   width: 95%;
-  height: 100%;
+  min-height: 100%;
   margin-top: 20px;
 }
 
@@ -80,14 +88,6 @@ body {
   left: 0;
   background: black;
   opacity: 0.65;
-}
-
-#main-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  overflow-y: scroll;
 }
 
 .App {

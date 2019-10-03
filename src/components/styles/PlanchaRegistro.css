@@ -1,0 +1,62 @@
+.plancha-registro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+}
+
+.plancha-registro__header {
+    background: #373737;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.plancha-registro__organo {
+    background: #1B252B;
+    width: 90%;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+.plancha-registro__puesto {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    background: #1C1A1A;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.plancha-registro__puesto--revisar {
+    display: flex;
+    align-items: center;
+    width: 65%;
+}
+
+.plancha-registro__organo h2 {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.plancha-registro__puesto h4 {
+    color: #FFFFFF;
+    margin: 15px 0;
+    font-weight: 400;
+    position: relative;
+    left: 15px;
+    font-size: 20px;
+}
+
+.plancha-registro__puesto--revisar input {
+    border-radius: 5px;
+    outline: none;
+    padding: 3px;
+    flex-grow: 1;
+}
