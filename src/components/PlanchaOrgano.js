@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 
 class PlanchaOrgano extends Component {
-
+    
+    
     nombreOrgano = this.props.organo.nombre
+    
 
     puestos = Object.keys(this.props.organo.puestos).map((puesto) => {
+        console.log(this.props[puesto])
         return(
             <div 
             className="plancha-registro__puesto"
@@ -18,8 +21,8 @@ class PlanchaOrgano extends Component {
                     <input 
                         type="text" 
                         name={puesto} 
-                        onChange={(event) => this.props.handleChange(this.nombreOrgano,event)}
-                        value={this.props.organo[puesto]}
+                        value={this.props[puesto]}
+                        onChange={(event) => this.props.handleChange(this.nombreOrgano, event)}
                     />
 
                     <div className="plancha__organo--disponible"></div>
@@ -30,6 +33,7 @@ class PlanchaOrgano extends Component {
     })
 
     render() {
+        console.log(this.props)
         return (
             <div className="plancha-registro__organo">
 

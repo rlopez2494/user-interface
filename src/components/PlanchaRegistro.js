@@ -28,8 +28,11 @@ class PlanchaRegistro extends Component {
     }
 
     handleChange = (nombreOrgano, event) => {
-        const currentState = {...this.state[nombreOrgano]}
+
+        const currentState = {...this.state[nombreOrgano]};
+        
         const { value, name } = event.target;
+        console.log(value);
         currentState[name] = value;
         
         this.setState({
@@ -66,9 +69,9 @@ class PlanchaRegistro extends Component {
                     <h1>REGISTRO DE PLANCHA</h1>
                 </div>
 
-                {
-                    this.planchaOrganos
-                }
+               {
+                   this.planchaOrganos
+               }
 
             </div>
         );
