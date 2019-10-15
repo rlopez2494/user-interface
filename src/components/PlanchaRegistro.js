@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import PlanchaOrgano from "./PlanchaOrgano"
 import "./styles/PlanchaRegistro.css";
+import axios from 'axios'
 
 class PlanchaRegistro extends Component {
-
+    
     state = {
         juntaDirectiva: {
 
@@ -27,36 +28,33 @@ class PlanchaRegistro extends Component {
         }
     }
 
-    handleChange = (nombreOrgano, event) => {
 
-        const currentState = {...this.state[nombreOrgano]};
-        
-        const { value, name } = event.target;
-        console.log(value);
-        currentState[name] = value;
+    handleChange = (nombreOrgano, stateOrgano) => {
+
+        const newState = {...stateOrgano};
         
         this.setState({
-            [nombreOrgano]: currentState
+            [nombreOrgano]: newState
         })
     }
 
-    planchaOrganos = Object.keys(this.state).map((organo) => {
+    handleSubmit = () => {
+        console.log(this.state)
+        axios.post('http://localhost:9000/planchas', this.state)
+        .then((response) => {console.log(response)})
+        .catch((error) => {console.log(error)})
+    }
 
+    planchaOrganos = Object.values(this.state).map((organo, index) => {
+        const nombresArreglo = Object.keys(this.state)
         return(
             <PlanchaOrgano 
-                organo={{
-                    nombre: organo,
-                    puestos: {...this.state[organo]}
-                }}
+                nombre={nombresArreglo[index]}
+                puestos={organo}
+                id={index}
                 handleChange={this.handleChange}
-                presidente={this.state[organo].presidente}
-                vicepresidente={this.state[organo].viceresidente}
-                tesorero={this.state[organo].tesorero}          
-                secretarioGeneral={this.state[organo].secretarioGeneral}
-                key={Math.random()}
             />
         )
-
     })
 
     render() {
@@ -69,9 +67,17 @@ class PlanchaRegistro extends Component {
                     <h1>REGISTRO DE PLANCHA</h1>
                 </div>
 
-               {
-                   this.planchaOrganos
-               }
+                {
+                    this.planchaOrganos
+                }
+
+                <div className="plancha-registro__botones">
+
+                    <button onClick={this.handleSubmit}>GUARDAR</button>
+
+                    <button>CANCELAR</button>
+
+                </div>
 
             </div>
         );
