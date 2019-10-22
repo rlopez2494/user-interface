@@ -45,13 +45,14 @@
     position: absolute;
     bottom: 22px;
 }
+/************** Estilos de plancha ****************/
+
 .plancha {
     background: #1B252B;
     border: none;
     border-radius: 15px;
-    margin-top: 30px;
+    margin: 30px 10px 0 10px;
 }
-
 .plancha__detalles {
     position: fixed;
     top: 10%;
@@ -181,6 +182,31 @@
     font-size: 25px;
     font-weight: bold;
     padding: 0;
+}
+
+/**************** Media Queries ***************/
+
+@media screen and (max-width: 560px) {
+
+    .plancha__foto {
+        display: none;
+    }
+    #main-section, #header {
+        min-width: 420px;
+    }
+    .plancha {
+        width: 90%;
+    }
+    ul.plancha__organos {
+        width: 90%;
+    }
+    ul.plancha__organos h5 {
+        font-size: 25px;
+        width: 85%;
+    }
+    .plancha--agregar__container h1:nth-child(2) {
+        display: none;
+    }
 }
 
 
