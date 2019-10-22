@@ -3,16 +3,28 @@ import './styles/LoginForm.css';
 import Advertencia from '../img/advertencia.jpg';
 import axios from 'axios';
 import { Link } from "react-router-dom";
+import validate from "validate.js"
 
 class LoginForm extends Component{
     state = {
-        error : false,
         errorType : "",
         nacionalidad: "v",
         cedula: "",
-        password: ""
+        password: "",
+        isAdmin: false,
     }
 
+    componentDidMount = () => {
+
+        console.log(this.props.match.path)
+
+        if(this.props.match.path === "/admin") {
+
+            this.setState({
+                isAdmin: true
+            })
+        }
+    }
     dataCall = (bearerToken) => {
         axios.post('http://localhost:9000/usuario', {
             headers: {
@@ -28,38 +40,39 @@ class LoginForm extends Component{
         })
     }
 
-    apiCall = () => {
-
-        const { cedula, password } = this.state;
-        console.log(cedula, password);
+    apiCall = (cedula, password, isAdmin) => {
 
         axios.post('http://localhost:9000/login', {
             cedula,
-            password
+            password,
+            isAdmin
         })
         .then((response) => {
             console.log(response.data);
 
             const bearerToken = response.data
             this.dataCall(bearerToken)
-            
-            // const error = response.data;
-            
-
-            //     this.setState({
-            //         error: true,
-            //         errorType: error
-            //     });
-
-            })
-        .catch(function (err) {
+        })
+        .catch((err) => {
             console.log(err);
+            if(err.response && err.response.data) {
+                this.setState({
+                    errorType: err.response.data
+                })
+            }
+            else {
+                this.setState({
+                    errorType: "Problema de servidor"
+                })
+            }
         })
     }
  
     handleChange = (e) => {
         const { name, value } = e.target;
-
+        if (name === "cedula") {
+            parseInt(name, 10)
+        }
         this.setState({
             [name]: value
         });
@@ -67,29 +80,43 @@ class LoginForm extends Component{
 
     handleSubmit = (e) => {
 
-        const { cedula, password } = this.state;
-        console.log(cedula, password)
-
         e.preventDefault();
-        this.apiCall();
+        
+        const { cedula, password, isAdmin } = this.state;
+        
+        if (!validate.isEmpty(cedula)) {
+
+            if(validate.isInteger(parseInt(cedula))) {
+
+                if(!validate.isEmpty(password)){
+                    this.apiCall(cedula, password, isAdmin)
+                }
+                else {
+                    this.setState({
+                        errorType: "Ingrese contraseña"
+                    })
+                }
+                
+            }
+            else {
+                this.setState({
+                    errorType: "Usuario invalido"
+                })
+            }
+            
+        }
+        else {
+            this.setState({
+                errorType: "Ingrese un usuario"
+            })
+        }
 
     }
   
 
     render() {
         return(
-            <div 
-                id="login-form"
-                style={
-                    {
-                        backgroundColor: 
-                        (this.props.match.url === "/admin") ? 
-                        "rgba(0, 49, 75, 0.73)" 
-                        : 
-                        null 
-                    }
-                }
-            >
+            <div id="login-form">
     
                 <p className="highlight">BIENVENIDO</p>
     
@@ -135,7 +162,7 @@ class LoginForm extends Component{
                     {/*Conditional Rendering for errors*/}
     
                     {
-                        (this.state.error) ?
+                        (this.state.errorType) ?
     
                             <div id="login-error">
                                 <img 
@@ -160,25 +187,19 @@ class LoginForm extends Component{
     
                 <form onSubmit={this.handleSubmit}>
 
-                    
                         <button 
                             type="submit" 
                             id="ingresar"
                             >INGRESAR
                         </button>
                     
-                    
 
-                    {
-                        (this.props.match.url === "/admin") ?
-                        null
-                        :
-                        <button 
-                            type="submit" 
-                            id="registrarse"
-                            >REGISTRARSE
-                        </button>
-                    }
+                    <button 
+                        type="submit" 
+                        id="registrarse"
+                    >REGISTRARSE
+
+                    </button>
 
                 </form>
                 
