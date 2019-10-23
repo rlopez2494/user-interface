@@ -54,10 +54,11 @@
     margin: 30px 10px 0 10px;
 }
 .plancha__detalles {
-    position: fixed;
-    top: 10%;
+    position: absolute;
+    top: 50%;
     left: 50%;
-    transform: (50%, 50%);
+    transform: translate(-50%, -50%);
+    min-width: 411px;
     background: white;
     display: flex;
     flex-direction: column;
@@ -93,12 +94,12 @@
     color: #03A50E;
     margin-right: 5px;
 }
-.plancha__detalles--cerrar {
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px 0 15px 0;
+.plancha__detalles__organo:nth-child(4) {
+    padding-bottom: 60px;
 }
-.plancha__detalles--cerrar button {
+
+.plancha__detalles button {
+    margin: 20px 20px 20px 0; 
     padding: 10px 15px;
     background: #C46565;
     font-size: 20px;

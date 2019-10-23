@@ -113,13 +113,6 @@ class Plancha extends Component{
                         <p> <em> Secretario General: </em> {secretarioGeneral} (CIV Nro. 1235435) </p>
                     </li>
                 </ul>
-
-                <div className="plancha__detalles--cerrar">
-                    <button 
-                        className="Button"
-                        onClick={this.toggleDetails}
-                    >Cerrar</button>
-                </div>
                      
             </div>
         )
@@ -173,7 +166,20 @@ class Plancha extends Component{
                                 this.juntaDirectivaDeCentro(this.props.data.juntaDirectivaDeCentro)
                                 :
                                 null
-                            }                      
+                            }  
+                            
+                            
+                            <button 
+                                className="Button"
+                                style={{
+                                    position: "fixed",
+                                    bottom: 0,
+                                    right: 0
+                                }}
+                                onClick={this.toggleDetails}
+                            >Cerrar
+                            </button>
+                                               
 
                         </div>   
                     </div>
