@@ -32,7 +32,7 @@ class App extends Component {
   }
 
   handleBar = (event) => {
-    console.log(event.target.name);
+    
     const toggle = event.target.name;
 
     this.setState({

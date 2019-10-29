@@ -17,8 +17,6 @@ class VerificarIdentidad extends Component {
 
         const { name } = event.target;
 
-        console.log(name);
-
         this.setState({
             stage: name
         });

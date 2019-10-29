@@ -16,8 +16,6 @@ class LoginForm extends Component{
 
     componentDidMount = () => {
 
-        console.log(this.props.match.path)
-
         if(this.props.match.path === "/admin") {
 
             this.setState({
@@ -32,7 +30,6 @@ class LoginForm extends Component{
             }
         })
         .then((response) => {
-            console.log(response.data.user["_id"])
             this.props.history.push("/admin/" + response.data.user["_id"])
         })
         .catch((err) => {
@@ -48,7 +45,6 @@ class LoginForm extends Component{
             isAdmin
         })
         .then((response) => {
-            console.log(response.data);
 
             const bearerToken = response.data
             this.dataCall(bearerToken)

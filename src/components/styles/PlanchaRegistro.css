@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: white;
 }
 
 .plancha-registro__header {
@@ -11,6 +10,7 @@
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 .plancha-registro__organo {
@@ -47,7 +47,7 @@
 
 .plancha-registro__puesto h4 {
     color: #FFFFFF;
-    margin: 15px 0;
+    margin: 15px 15px 15px 0;
     font-weight: 400;
     position: relative;
     left: 15px;
@@ -59,4 +59,30 @@
     outline: none;
     padding: 3px;
     flex-grow: 1;
+}
+
+.plancha-registro__botones button:nth-child(2) {
+    background: #C46565;
+}
+.plancha-registro__botones button {
+    padding: 10px;
+    font-weight: bold;
+    margin: 15px 15px;
+}
+
+@media screen and (max-width: 700px) {
+    .plancha-registro__puesto {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        width: 70%;
+        min-width: 300px;
+    }
+
+    .plancha-registro__puesto h4 {
+        margin: 15px 0;
+        text-decoration: underline;
+        position: static;
+    }
+
 }

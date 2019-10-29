@@ -4,7 +4,6 @@
     align-content: flex-start;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background: #E2E2E2;
 }
 .plancha--agregar {
     position: absolute;

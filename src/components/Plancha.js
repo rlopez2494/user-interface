@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import vacio from "../img/plancha-foto.png"
+import planchaDetails from "../config/planchaDetails"
 
 class Plancha extends Component{
 
@@ -20,106 +21,11 @@ class Plancha extends Component{
     pathname = this.props.routeProps.location.pathname
 
     agregarPlancha = () => {
-        console.log("hey")
         this.history.push(`${this.pathname}/planchaRegistro`)
-    }
-
-    juntaDirectiva = (data) => {
-        console.log(data)
-        const {presidente, secretarioGeneral, tesorero, vicepresidente} = data
-        return(
-        <div className="plancha__detalles__organo">
-        
-            <div className="plancha__detalles__organo--highlight">
-                <h5>---</h5>
-                <h5>Junta Directiva Nacional</h5>
-            </div>
-
-            <ul className="plancha__detalles__JDN">
-                <li>
-                    <p> <em> Presidente: </em> {presidente} (CIV Nro. 45874145) </p>
-                </li>
-
-                <li>
-                    <p> <em> Vicepresidente: </em> {vicepresidente} (CIV Nro. 45874145) </p>
-                </li>
-
-                <li>
-                    <p> <em> Tesorero: </em> {tesorero} (CIV Nro. 45874145) </p>
-                </li>
-
-                <li>
-                    <p> <em> Secretario General: </em> {secretarioGeneral} (CIV Nro. 45874145) </p>
-                </li>
-            </ul>
-    
-        </div>
-        )
-    }
-
-    tribunalDisciplinario = (data) => {
-        const {presidente, vicepresidente, secretarioGeneral} = data
-
-        return(
-            <div className="plancha__detalles__organo">
-    
-                <div className="plancha__detalles__organo--highlight">
-                    <h5>---</h5>
-                    <h5>Tribunal Disciplinario</h5>
-                </div>
-
-                <ul className="plancha__detalles__TDN">
-                    <li>
-                        <p> <em> Presidente: </em> {presidente} (CIV Nro. 45874145) </p>
-                    </li>
-
-                    <li>
-                        <p> <em> Vicepresidente: </em> {vicepresidente} (CIV Nro. 65469874) </p>
-                    </li>
-
-                    <li>
-                        <p> <em> Secretario General: </em> {secretarioGeneral} (CIV Nro. 45754185) </p>
-                    </li>
-                </ul>
-                
-            </div>
-        )
-    }
-
-    juntaDirectivaDeCentro = (data) => {
-        const { presidente, vicepresidente, tesorero, secretarioGeneral} = data
-        return(
-            <div className="plancha__detalles__organo">
-
-                <div className="plancha__detalles__organo--highlight">
-                    <h5>---</h5>
-                    <h5>Tribunal Disciplinario de Centro</h5>
-                </div>
-
-                <ul className="plancha__detalles__JDC">
-                    <li>
-                        <p> <em> Presidente: </em> {presidente} (CIV Nro. 45874145) </p>
-                    </li>
-
-                    <li>
-                        <p> <em> Viceresidente: </em> {vicepresidente} (CIV Nro. 45324245) </p>
-                    </li>
-
-                    <li>
-                        <p> <em> Tesorero: </em> {tesorero} (CIV Nro. 34534565) </p>
-                    </li>
-
-                    <li>
-                        <p> <em> Secretario General: </em> {secretarioGeneral} (CIV Nro. 1235435) </p>
-                    </li>
-                </ul>
-                     
-            </div>
-        )
     }
     
     render() {
-        console.log(this.props.id)
+         
         return(
             <div 
                 className="plancha"
@@ -145,30 +51,15 @@ class Plancha extends Component{
                         <div className="plancha__detalles">
     
                             <h3 className="plancha__detalles__nro-plancha">PLANCHA Nro. 4</h3>      
-    
 
-                            {   
-                                (this.props.data) ?
-                                this.juntaDirectiva(this.props.data.juntaDirectiva)
-                                :
+                            {
+                                this.props.data ?
+                                planchaDetails(this.props.data)
+                                    :
                                 null
                             }
                             
-                            {
-                                (this.props.data) ?
-                                this.tribunalDisciplinario(this.props.data.tribunalDisciplinario)
-                                :
-                                null
-                            }
-
-                            {
-                                (this.props.data) ? 
-                                this.juntaDirectivaDeCentro(this.props.data.juntaDirectivaDeCentro)
-                                :
-                                null
-                            }  
-                            
-                            
+  
                             <button 
                                 className="Button"
                                 style={{

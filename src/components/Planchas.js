@@ -17,7 +17,6 @@ class Planchas extends Component{
     }
 
     render() {
-        console.log(this.state.data)
         return (
             <div className="planchas main-box">
 
@@ -26,7 +25,7 @@ class Planchas extends Component{
                         
                         return(
                             <Plancha 
-                            key={plancha['_id']}
+                            key={index}
                             id={plancha['_id']}
                             routeProps={this.props}
                             data={plancha}
