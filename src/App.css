@@ -5,6 +5,17 @@ body {
   background-size: cover;
   /* background-color: #282c34; */
   min-width: 320px;
+
+  /* Grey Palette */
+  --grey-1: #707070;
+  --grey-9: #E4F0F6;
+
+  /* Red Palette */
+  --red-4: #C46565;
+
+  /* Blue Palette */
+  --blue-2: #032340;
+  --blue-9: #D4E2E9;
 }
 
 /* width */
@@ -67,6 +78,15 @@ body {
   width: 95%;
   height: 100%;
   margin-top: 20px;
+}
+
+.main-box__header {
+  background: #373737;
+  color: white;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
 }
 
 .column {

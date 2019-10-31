@@ -9,7 +9,7 @@ import Header from "./components/Header";
 import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
 import LoginForm from "./components/LoginForm";
-import Candidatos from "./components/Candidatos";
+import Papeleta from "./components/Papeleta";
 import ConfigurarPerfil from "./components/ConfigurarPerfil";
 import VerificarIdentidad from "./components/VerificarIdentidad";
 import CambioClave from "./components/CambioClave";
@@ -76,7 +76,7 @@ class App extends Component {
   
                       <Route path="/" exact component={ LoginForm }/>
   
-                      <Route path="/usuario" exact component={Candidatos} />
+                      <Route path="/usuario" exact component={ Papeleta } />
   
                       <Route path="/usuario/configurarPerfil" component={ ConfigurarPerfil } />
   
@@ -84,7 +84,7 @@ class App extends Component {
   
                       <Route path="/usuario/cambioClave" component={ CambioClave } />
   
-                      <Route path="/usuario/candidatos" component={ Candidatos } />
+                      {/* <Route path="/usuario/candidatos" component={ Candidatos } /> */}
   
                       <Route path="/usuario/partidos" component={ Partidos } />
   

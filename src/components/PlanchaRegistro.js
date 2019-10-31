@@ -130,7 +130,7 @@ class PlanchaRegistro extends Component {
                     </div>
             }
                 
-                <div className="plancha-registro__header">
+                <div className="main-box__header">
                     <h1>REGISTRO DE PLANCHA</h1>
                 </div>
 

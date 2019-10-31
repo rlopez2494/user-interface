@@ -6,8 +6,6 @@ import { BrowserRouter as  Router, Link } from "react-router-dom"
 function Header(props) {
 
     /* Invocacion de la funcion de conteo en el header */
-    
-
     const { pathname } = props.location;
  
     return(
